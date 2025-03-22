@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# MAP-Project
-=======
 # map_project
 
 A new Flutter project.

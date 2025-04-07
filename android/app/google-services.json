@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "798457368770",
+    "project_id": "clone-e15bb",
+    "storage_bucket": "clone-e15bb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798457368770:android:70ebf81089720eba052b5b",
+        "android_client_info": {
+          "package_name": "com.example.youtube_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798457368770-ohcml8lgebtt124tq64vrrrbhjtp67p6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.youtube_clone",
+            "certificate_hash": "8c9d12629d986e721d0bb426a67370a3ee6d4784"
+          }
+        },
+        {
+          "client_id": "798457368770-nev73f5g5dh059skisvht08lpp94b9tk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLtigKfXqqp9Kd3lVmFgGkYtOgNkQ0RxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798457368770-nev73f5g5dh059skisvht08lpp94b9tk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "798457368770-rjhieea5ckh5kp8slr7hb6o78a9f6i78.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.youtubeClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

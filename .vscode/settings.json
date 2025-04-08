@@ -1,3 +1,4 @@
 {
-  "cmake.sourceDirectory": "C:/youtube-clone-main/linux"
+  "cmake.sourceDirectory": "C:/youtube-clone-main/linux",
+  "java.configuration.updateBuildConfiguration": "automatic"
 }

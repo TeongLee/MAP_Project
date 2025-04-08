@@ -52,3 +52,14 @@ build
 # Too large files, install it independently
 /android/java_pid27636.hprof
 /android/java_pid25412.hprof
+
+# 8 April Meeting, set .gitignore first
+c_cpp_properties.json
+settings.json
+settings.gradle
+local.properties
+pubspec.lock
+pubspec.yaml
+flutter_export_environment.sh
+Generated.xcconfig
+/video_thumbnail

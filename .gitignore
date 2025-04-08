@@ -55,11 +55,11 @@ build
 
 # 8 April Meeting, set .gitignore first
 c_cpp_properties.json
-\.vscode\settings.json
-android\settings.gradle
-video_thumbnail\example\android\local.properties
+/.vscode/settings.json
+android/settings.gradle
+video_thumbnail/example/android/local.properties
 pubspec.lock
 pubspec.yaml
 flutter_export_environment.sh
 Generated.xcconfig
-/video_thumbnail
+/video_thumbnail/

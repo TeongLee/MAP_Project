@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=C:\Flutter_UTM\flutter
-FLUTTER_APPLICATION_PATH=C:\youtube-clone-main\video_thumbnail\example
+FLUTTER_ROOT=C:\flutter
+FLUTTER_APPLICATION_PATH=C:\Projects\map-flutter\MAP Project - ShowLa App\MAP_Project\video_thumbnail\example
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build

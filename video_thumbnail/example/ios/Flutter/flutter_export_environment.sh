@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Flutter_UTM\flutter"
-export "FLUTTER_APPLICATION_PATH=C:\youtube-clone-main\video_thumbnail\example"
+export "FLUTTER_ROOT=C:\flutter"
+export "FLUTTER_APPLICATION_PATH=C:\Projects\map-flutter\MAP Project - ShowLa App\MAP_Project\video_thumbnail\example"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"

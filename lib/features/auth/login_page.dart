@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -39,7 +38,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               const Text(
-                "Welcome to YouView👋👋👋",
+                "Welcome to YouView test testttt👋👋👋",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w700,

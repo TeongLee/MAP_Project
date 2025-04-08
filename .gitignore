@@ -67,3 +67,4 @@ Generated.xcconfig
 lib/features/auth/login_page.dart
 android/settings.gradle
 video_thumbnail/example/android/local.properties
+/video_thumbnail/

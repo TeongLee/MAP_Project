@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_clone/features/auth/register_page.dart';
+import 'package:youtube_clone/features/auth/login_page.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
 
   @override
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
+    confirmPasswordController.dispose();
     super.dispose();
   }
 
@@ -40,26 +42,14 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
-                      onTap: () {},
-                      child: const Text(
-                        'Log in',
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF00508F),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const RegisterPage()),
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
                         );
                       },
                       child: const Text(
-                        'Sign up',
+                        'Log in',
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 20,
@@ -68,14 +58,23 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
+                    Text(
+                      'Sign up',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF00508F),
+                      ),
+                    ),
                   ],
                 ),
                 Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.centerRight,
                   child: Container(
                     width: 140,
                     height: 3,
-                    margin: const EdgeInsets.only(top: 6, left: 30),
+                    margin: const EdgeInsets.only(top: 6, right: 35),
                     decoration: const BoxDecoration(
                       border: Border(
                         bottom: BorderSide(width: 3, color: Color(0xFF00508F)),
@@ -84,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
 
-                const SizedBox(height: 48),
+                const SizedBox(height: 20),
 
                 const Align(
                   alignment: Alignment.centerLeft,
@@ -165,11 +164,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
 
-                const SizedBox(height: 12),
+                const SizedBox(height: 28),
+
                 const Align(
-                  alignment: Alignment.centerRight,
+                  alignment: Alignment.centerLeft,
                   child: Text(
-                    'Forgot password?',
+                    'Confirm Password',
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontSize: 16,
@@ -178,13 +178,39 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 5),
 
-                const SizedBox(height: 30),
+                //Confirm Password TextField
+                Container(
+                  height: 56,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  child: TextField(
+                    controller: confirmPasswordController,
+                    obscureText: true,
+                    style: const TextStyle(fontSize: 16),
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Re-enter your password',
+                      hintStyle: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFFB3B3B3),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 40),
 
                 // Continue Button
                 GestureDetector(
                   onTap: () {
-                    print("Login tapped: ${emailController.text}, ${passwordController.text}");
+                    print("Sign up tapped: ${emailController.text}, ${passwordController.text}");
                   },
                   child: Container(
                     width: 376,
@@ -195,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: const Center(
                       child: Text(
-                        'Continue',
+                        'Sign Up',
                         style: TextStyle(
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w700,
@@ -227,12 +253,12 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
 
-                const SizedBox(height: 40),
+                const SizedBox(height: 30),
 
-                // Google Login Button
+                // Google Sign Up Button
                 ElevatedButton(
                   onPressed: () {
-                    // Google login logic will be added later
+                    // Google sign up logic will be added later
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
@@ -265,11 +291,11 @@ class _LoginPageState extends State<LoginPage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const RegisterPage()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
                   child: const Text(
-                    "Don't have an account? Sign up",
+                    "Already have an account? Sign in",
                     style: TextStyle(
                       fontFamily: 'Inter',
                       fontSize: 16,

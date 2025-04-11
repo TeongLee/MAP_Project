@@ -18,6 +18,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool isLoading = false;
+  bool isPasswordVisible = false;
 
   @override
   void dispose() {
@@ -221,17 +222,28 @@ Future<void> handleGoogleLogin() async {
                       child: TextFormField(
                         controller: passwordController,
                         validator: validatePassword,
-                        obscureText: true,
+                        obscureText: !isPasswordVisible,
                         style: const TextStyle(fontSize: 16),
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Enter your password',
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                             fontFamily: 'Poppins',
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
                             color: Color(0xFFB3B3B3),
                           ),
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              isPasswordVisible ? Icons.visibility: Icons.visibility_off,
+                              color:const Color(0xff1E1E1E),
+                            ),
+                            onPressed: (){
+                              setState(() {
+                                isPasswordVisible = !isPasswordVisible;
+                              });
+                            },
+                          )
                         ),
                       ),
                     ),

@@ -1,4 +1,5 @@
 {
   "cmake.sourceDirectory": "C:/youtube-clone-main/linux",
-  "java.configuration.updateBuildConfiguration": "automatic"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "dart.flutterSdkPath": ".fvm/versions/3.27.4"
 }

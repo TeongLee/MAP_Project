@@ -70,3 +70,6 @@ video_thumbnail/example/android/local.properties
 /video_thumbnail/
 .vscode/settings.json
 local.properties
+
+# FVM Version Cache
+.fvm/

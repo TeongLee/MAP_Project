@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_clone/features/auth/register_page.dart';
+import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
+import 'package:firebase_auth/firebase_auth.dart';
+
+import 'package:youtube_clone/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -183,9 +187,36 @@ class _LoginPageState extends State<LoginPage> {
 
                 // Continue Button
                 GestureDetector(
-                  onTap: () {
-                    print("Login tapped: ${emailController.text}, ${passwordController.text}");
+                  onTap: () async {
+                    String email = emailController.text.trim();
+                    String password = passwordController.text;
+
+                    try {
+                      UserCredential userCredential = await FirebaseAuth.instance
+                          .signInWithEmailAndPassword(email: email, password: password);
+
+                      // Navigate to HomePage on successful login
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => const HomePage()),
+                      );
+                    } on FirebaseAuthException catch (e) {
+                      String message;
+
+                      if (e.code == 'user-not-found') {
+                        message = 'No user found for that email.';
+                      } else if (e.code == 'wrong-password') {
+                        message = 'Wrong password provided.';
+                      } else {
+                        message = 'Login failed. ${e.message ?? "Unknown error."}';
+                      }
+
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text(message)),
+                      );
+                    }
                   },
+
                   child: Container(
                     width: 376,
                     height: 56,
